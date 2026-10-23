@@ -1,27 +1,56 @@
-# Tictac
+# Tic-Tac-Toe — Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+A two-player Tic-Tac-Toe game built with Angular. Players take turns placing X and O on a 3 × 3 board, and the game checks for a winner or a draw.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Start a new game and reset the board.
+- Alternate turns between X and O.
+- Detect horizontal, vertical, and diagonal wins.
+- Detect a draw when all nine squares are filled without a winner.
+- Separate game logic from the board and square presentation components.
 
-## Code scaffolding
+## Technology stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 14
+- TypeScript
+- Angular CLI
+- Jasmine and Karma test tooling
 
-## Build
+## Run locally
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Prerequisites: Node.js and npm compatible with Angular CLI 14.
 
-## Running unit tests
+~~~bash
+npm ci
+npm start
+~~~
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Open `http://localhost:4200/`.
 
-## Running end-to-end tests
+## Build and test
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+~~~bash
+npm run build
+npm test
+~~~
 
-## Further help
+## Project structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+~~~text
+src/app/
+├── board/                # Board and square presentation
+├── game/                 # Turns, moves, winner and draw logic
+└── app.component.*       # Application shell
+~~~
+
+## Next improvements
+
+- Prevent moves after the game has ended.
+- Add accessible labels and keyboard navigation.
+- Add unit tests for all win patterns, invalid moves, and draw detection.
+- Consider upgrading the Angular toolchain as part of ongoing maintenance.
+
+## License
+
+No license file is currently included. Add an explicit license before inviting others to reuse or redistribute this project.
